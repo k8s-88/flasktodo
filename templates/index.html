@@ -7,6 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>HI</h1>
+    <h1>To Do List</h1>
+    
+    <hr>
+
+    {% for t in tasks %}
+    <p>{{ t.name }}: {{ t.description }}</p>
+    {% endfor %}
+
+
+
+    <hr>
+    
+    <!--<form action="/add" method="POST">-->
+    <!--    <input type="text" name="task" placeholder="What's happening?"/>-->
+    <!--    <input type="submit" value="Send"/>-->
+    <!--</form>-->
 </body>
 </html>
