@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="/edit/{{ task.id }}" method="POST">
+        <input type="text" name="name" placeholder="Task Name" value= "{{ task.name }}" />
+        <input type="text" name="description" placeholder="description" value= "{{ task.description }}" />
+        
+        <label for="urgent">urgent?</label>
+        <input type="checkbox" name="urgent" id="urgent" {% if task.urgent %} checked {% endif %}/>
+        
+         <label for="urgent">done?</label>
+        <input type="checkbox" name="done" id="done" {% if task.done %} checked {% endif %}/>
+        <input type="submit" value="Save" />
+    </form>
+
+
+
+</body>
+
+</html>
